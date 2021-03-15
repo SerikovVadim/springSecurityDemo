@@ -1,9 +1,6 @@
 package ru.serikov.springSecurityDemo.model;
 
 
-
-
-
 public class Developer {
     private Long id;
     private String firstName;
