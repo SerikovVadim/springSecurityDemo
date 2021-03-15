@@ -4,6 +4,7 @@ package ru.serikov.springSecurityDemo.rest;
 import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import ru.serikov.springSecurityDemo.model.Developer;
+import ru.serikov.springSecurityDemo.model.Permission;
 
 import java.util.List;
 import java.util.stream.Collectors;
