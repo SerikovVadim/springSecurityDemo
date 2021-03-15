@@ -21,7 +21,7 @@ public class DeveloperRestControllerV1 {
 
 
     /**
-     * get all Developers
+     * Get all developers
      */
     @GetMapping
     public List<Developer> getAll() {
@@ -29,7 +29,7 @@ public class DeveloperRestControllerV1 {
     }
 
     /**
-     * get developer by id
+     * Get developer by id
      */
     @GetMapping("{id}")
     @PreAuthorize("hasAuthority('developers:read')")
@@ -40,6 +40,9 @@ public class DeveloperRestControllerV1 {
                 .orElse(null);
     }
 
+    /**
+     *Create developer
+     */
     @PostMapping
     @PreAuthorize("hasAuthority('developers:write')")
     public Developer createDeveloper(@RequestBody Developer developer) {
@@ -47,6 +50,9 @@ public class DeveloperRestControllerV1 {
         return developer;
     }
 
+    /**
+     * Delete developer
+     */
     @DeleteMapping("{id}")
     @PreAuthorize("hasAuthority('developers:write')")
     public void deleteById(@PathVariable Long id) {
