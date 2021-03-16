@@ -12,13 +12,13 @@ import java.util.List;
 
 public class SecurityUser implements UserDetails {
 
-    private final String userName;
+    private final String username;
     private final String password;
     private final List<SimpleGrantedAuthority> authorities;
     private final boolean isActive;
 
     public SecurityUser(String userName, String password, List<SimpleGrantedAuthority> authorities, boolean isActive) {
-        this.userName = userName;
+        this.username = userName;
         this.password = password;
         this.authorities = authorities;
         this.isActive = isActive;
@@ -36,7 +36,7 @@ public class SecurityUser implements UserDetails {
 
     @Override
     public String getUsername() {
-        return userName;
+        return username;
     }
 
     @Override
